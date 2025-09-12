@@ -19,7 +19,7 @@ export default function Permission() {
   }, []);
   useEffect(() => {
     const unsubscribe = messaging().onMessage(async remoteMessage => {
-      Alert.alert('Message come');
+      Alert.alert('Message come',JSON.stringify(remoteMessage?.notification?.body));
     });
     return unsubscribe;
   });
