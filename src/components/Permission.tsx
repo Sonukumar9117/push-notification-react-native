@@ -10,9 +10,10 @@ export default function Permission() {
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
        getToken();
       Alert.alert('permission Granted');
-    } else {
+    } else{
       Alert.alert('Permission Denied By You');
     }
+
   };
   useEffect(() => {
     askForPermission();
